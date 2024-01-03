@@ -1,9 +1,11 @@
 import Product from "./Product";
 
-const Products = (props) => {
+const Products = ({ products, onDelete }) => {
     return (
-        <ul className="mt-6">
-            { props.products.map(product => (<Product product={ product } key={ product.id }/>)) }
+        <ul className="flex flex-col gap-2 container">
+            { products.map(product => 
+                (<Product product={ product } key={ product.id } onDelete={ onDelete }/>)) 
+            }
         </ul>
     );
 }

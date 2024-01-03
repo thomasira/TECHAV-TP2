@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import Products from "./components/Products";
 import Header from "./components/Header";
+import AddProduct from "./components/AddProduct";
 
 function App() {
-  const products = [
+  const [products, setProducts] = useState([
     {
       "id": 1,
       "name": "Yogurt",
@@ -31,13 +32,21 @@ function App() {
       "description": "cast iron wok",
       "price": 67.99,
       "category": "kitchen tool"
-    },
-  ]
+    }
+  ])
+  const addProduct = product => { 
+    const newProduct = product;
+    setProducts([...products, newProduct]);
+  }
+  const deleteProduct = (id) => {
+    setProducts(products.filter(products => products.id !== id))
+  }
   return (
-    <div className="bg-blue-500 h-screen p-3">
+    <div className="bg-blue-500 h-screen p-3 flex flex-col items-center gap-5">
         <Header title="by and buy"/>
+        <AddProduct onAdd={ addProduct }/>
         { products.length > 0 ? (
-            <Products products={ products }/>
+            <Products products={ products } onDelete={ deleteProduct }/>
         ) : (
             <h2 className="text-white font-bold p-3 text-center text-red-500">No products</h2>
         )}
