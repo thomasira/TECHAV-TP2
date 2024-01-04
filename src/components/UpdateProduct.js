@@ -1,7 +1,7 @@
 import { FaTimes } from 'react-icons/fa';
 import { FaRegPenToSquare } from "react-icons/fa6";
 
-const Product = ({ product, onDelete, onUpdate }) => {
+const UpdateProduct = ({ product, onDelete, onUpdate }) => {
     return (
         <li className="w-1/2 bg-green-100 p-1 rounded-lg flex flex-1 gap-3 justify-between">
             <div>
@@ -14,11 +14,11 @@ const Product = ({ product, onDelete, onUpdate }) => {
                 </div>
             </div>
             <div className='flex flex-col gap-2'>
-                <button className='flex items-center btn btn-gr-red gap-2' onClick={ () => onDelete(product.id) }><FaTimes className='text-white'/>Delete</button>
-                <button className='flex items-center btn btn-gr-green gap-2' onClick={ () => onUpdate(product.id) }><FaRegPenToSquare className='flex-1'/>Modify</button>
+                <button className='flex items-center btn btn-gr-red gap-2' onClick={ () => onDelete(product.id) }>Cancel</button>
+                <button className='flex items-center btn btn-gr-green gap-2' onClick={ () => onUpdate(product.id) }>Confirm</button>
             </div>
         </li>
     );
 }
 
-export default Product;
+export default UpdateProduct;

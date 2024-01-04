@@ -17,7 +17,6 @@ const AddProduct = ({ onAdd }) => {
         setDescription('');
         setPrice('');
         setCategory('');
-
     }
     return (
         <form className="add-form" onSubmit={ onSubmit }>
@@ -43,13 +42,17 @@ const AddProduct = ({ onAdd }) => {
             </div>
             <div className="form-control">
                 <label>Set price
-                    <input
-                    type='number'
-                    step='0.01'
-                    min='0'
-                    value={ price }
-                    onChange = { e => setPrice(e.target.value) }
-                    />
+                    <div className='flex items-center gap-2'>
+                        <span className='font-bold'>$</span>
+                        <input className='flex-1'
+                        type='number'
+                        step='0.01'
+                        min='0'
+                        value={ price }
+                        onChange = { e => setPrice(e.target.value) }
+                        />
+                    </div>
+                   
                 </label>
             </div>
             <div className="form-control">
