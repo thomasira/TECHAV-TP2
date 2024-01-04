@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Products from "./components/Products";
 import Header from "./components/Header";
 import AddProduct from "./components/AddProduct";
+import UpdateProduct from "./components/UpdateProduct";
 
 function App() {
     const [products, setProducts] = useState([
@@ -27,7 +28,7 @@ function App() {
         "category": "book"
         },
         {
-        "id": 4,
+        "id": 8,
         "name": "Wok",
         "description": "cast iron wok",
         "price": 67.99,
@@ -35,14 +36,18 @@ function App() {
         }
     ])
     const addProduct = product => { 
-        const newProduct = product;
-        setProducts([...products, newProduct]);
+        product.id = products[products.length - 1].id + 1;
+        setProducts([...products, product]);
+    }
+    const updateProduct = updateProduct => {
+        setProducts(products.map(product => 
+            product.id === updateProduct.id ? {
+                ...product, name: updateProduct.name, description: updateProduct.description, price: updateProduct.price, category: updateProduct.category 
+            } : product
+        ));
     }
     const deleteProduct = id => {
         setProducts(products.filter(products => products.id !== id));
-    }
-    const updateProduct = id => {
-        console.log(id)
     }
     const [showAdd, setShowAdd] = useState(false);
 
@@ -51,9 +56,9 @@ function App() {
             <Header title='By & Buy' toggleForm={ () => setShowAdd(!showAdd) } showAdd={ showAdd }/>
             { showAdd && <AddProduct onAdd={ addProduct }/> }
             { products.length > 0 ? (
-                <Products products={ products } onDelete={ deleteProduct }/>
+                <Products products={ products } onDelete={ deleteProduct } onUpdate={ updateProduct }/>
             ) : (
-                <h2 className="text-white font-bold p-3 text-center text-red-500">No products</h2>
+                <h2 className="text-white font-bold p-3 text-center text-red-500">No product available</h2>
             )}
         </div>
     );

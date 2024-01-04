@@ -14,8 +14,17 @@ const Product = ({ product, onDelete, onUpdate }) => {
                 </div>
             </div>
             <div className='flex flex-col gap-2'>
-                <button className='flex items-center btn btn-gr-red gap-2' onClick={ () => onDelete(product.id) }><FaTimes className='text-white'/>Delete</button>
-                <button className='flex items-center btn btn-gr-green gap-2' onClick={ () => onUpdate(product.id) }><FaRegPenToSquare className='flex-1'/>Modify</button>
+                <button 
+                    className='flex items-center btn btn-gr-red gap-2' 
+                    onClick={ () => onDelete(product.id) }
+                >
+                    <FaTimes className='text-white'/>Delete
+                </button>
+                <button className='flex items-center btn btn-gr-green gap-2' 
+                onClick={ () => onUpdate(product.id) }
+                >
+                    <FaRegPenToSquare className=''/>Modify
+                </button>
             </div>
         </li>
     );
