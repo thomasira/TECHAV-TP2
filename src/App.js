@@ -42,7 +42,11 @@ function App() {
     const updateProduct = updateProduct => {
         setProducts(products.map(product => 
             product.id === updateProduct.id ? {
-                ...product, name: updateProduct.name, description: updateProduct.description, price: updateProduct.price, category: updateProduct.category 
+                ...product, 
+                name: updateProduct.name, 
+                description: updateProduct.description, 
+                price: updateProduct.price, 
+                category: updateProduct.category 
             } : product
         ));
     }
