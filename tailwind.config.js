@@ -10,7 +10,8 @@ module.exports = {
         main: {
           200: '#8e9dc3',
           600: '#324e95',
-        }
+        },
+        comp: '#f8d16d'
       },
       fontFamily: {
         archivo:['Archivo, sans-serif']
