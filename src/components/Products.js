@@ -12,7 +12,7 @@ const Products = ({ products, onDelete, onUpdate, onAdd }) => {
     return (
         <div>
             <Header title='By & Buy' toggleForm={ () => setShowAdd(!showAdd) } showAdd={ showAdd }/>
-            { showAdd && <AddProduct onAdd={ onAdd }/> }
+            { showAdd && <AddProduct onAdd={ onAdd } toggleForm={ () => setShowAdd(!showAdd) }/> }
             <ul className='flex flex-col gap-2 container'>
                 { products.map(product => (
                     product.id !== updateId ? (

@@ -57,7 +57,7 @@ function App() {
 
     return (
         <BrowserRouter>
-        <div className="bg-blue-500 h-screen p-3 flex flex-col items-center gap-5">
+        <div className="bg-light text-dark font-archivo h-screen p-3 flex flex-col items-center gap-5">
             <nav>
                 <Link to="/">Home</Link>
                 <Link to="/products">Products</Link>
@@ -68,7 +68,7 @@ function App() {
                 <Route path='/products' element={ products.length > 0 ? (
                     <Products products={ products } onDelete={ deleteProduct } onUpdate={ updateProduct } onAdd={ addProduct }/>
                     ) : (
-                        <h2 className="text-white font-bold p-3 text-center text-red-500">No product available</h2>
+                        <h2 className="text-light font-bold p-3 text-center text-red-500">No product available</h2>
                 )}/>
             </Routes>
         </div>

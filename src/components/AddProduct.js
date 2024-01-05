@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const AddProduct = ({ onAdd }) => {
+const AddProduct = ({ onAdd, toggleForm }) => {
     const [name, setName] = useState('');
     const [description, setDescription] = useState('');
     const [price, setPrice] = useState('00.00');
@@ -13,6 +13,7 @@ const AddProduct = ({ onAdd }) => {
             return
         }
         onAdd({ name, description, price, category });
+        toggleForm();
         setName('');
         setDescription('');
         setPrice('');
