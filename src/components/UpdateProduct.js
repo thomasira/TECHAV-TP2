@@ -1,6 +1,4 @@
-import { FaTimes } from 'react-icons/fa';
-import { FaRegPenToSquare } from "react-icons/fa6";
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 const UpdateProduct = ({ product, onUpdate, toggleForm }) => {
     const [name, setName] = useState(product.name);
@@ -20,8 +18,8 @@ const UpdateProduct = ({ product, onUpdate, toggleForm }) => {
     }
 
     return (
-        <form className="add-form w-1/2" onSubmit={ onSubmit }>
-            <div className="form-control">
+        <form className='add-form w-1/2' onSubmit={ onSubmit }>
+            <div className='form-control'>
                 <label>Product
                     <input
                     type='text'
@@ -30,7 +28,7 @@ const UpdateProduct = ({ product, onUpdate, toggleForm }) => {
                     />
                 </label>
             </div>
-            <div className="form-control">
+            <div className='form-control'>
                 <label>Description
                     <input
                     type='text'
@@ -39,7 +37,7 @@ const UpdateProduct = ({ product, onUpdate, toggleForm }) => {
                     />
                 </label>
             </div>
-            <div className="form-control">
+            <div className='form-control'>
                 <label>Set price
                     <div className='flex items-center gap-2'>
                         <span className='font-bold'>$</span>
@@ -54,18 +52,18 @@ const UpdateProduct = ({ product, onUpdate, toggleForm }) => {
                    
                 </label>
             </div>
-            <div className="form-control">
+            <div className='form-control'>
                 <label>Category
-                    <select name="category" value={ category } onChange={ e => setCategory(e.target.value) }>
-                        <option value="furniture">Furniture</option>
-                        <option value="kitchen-tool">Kitchen tool</option>
-                        <option value="car">Car</option>
-                        <option value="electronic">Electronic</option>
-                        <option value="book">Book</option>
+                    <select name='category' value={ category } onChange={ e => setCategory(e.target.value) }>
+                        <option value='furniture'>Furniture</option>
+                        <option value='kitchen-tool'>Kitchen tool</option>
+                        <option value='car'>Car</option>
+                        <option value='electronic'>Electronic</option>
+                        <option value='book'>Book</option>
                     </select>
                 </label>
             </div>
-            <input type="submit" className="btn btn-gr-green btn-block mt-4" value="Save product"/>
+            <input type='submit' className='btn btn-gr-green btn-block mt-4' value='Save product'/>
         </form>
     );
 }

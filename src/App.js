@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import Products from "./components/Products";
-import Header from "./components/Header";
-import AddProduct from "./components/AddProduct";
-import UpdateProduct from "./components/UpdateProduct";
+import { Link } from "react-router-dom";
+
+import {BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from "./components/Home";
 
 function App() {
     const [products, setProducts] = useState([
@@ -53,18 +54,25 @@ function App() {
     const deleteProduct = id => {
         setProducts(products.filter(products => products.id !== id));
     }
-    const [showAdd, setShowAdd] = useState(false);
 
     return (
+        <BrowserRouter>
         <div className="bg-blue-500 h-screen p-3 flex flex-col items-center gap-5">
-            <Header title='By & Buy' toggleForm={ () => setShowAdd(!showAdd) } showAdd={ showAdd }/>
-            { showAdd && <AddProduct onAdd={ addProduct }/> }
-            { products.length > 0 ? (
-                <Products products={ products } onDelete={ deleteProduct } onUpdate={ updateProduct }/>
-            ) : (
-                <h2 className="text-white font-bold p-3 text-center text-red-500">No product available</h2>
-            )}
+            <nav>
+                <Link to="/">Home</Link>
+                <Link to="/products">Products</Link>
+            </nav>
+            
+            <Routes>
+                <Route path='/' element={ <Home/> }/>
+                <Route path='/products' element={ products.length > 0 ? (
+                    <Products products={ products } onDelete={ deleteProduct } onUpdate={ updateProduct } onAdd={ addProduct }/>
+                    ) : (
+                        <h2 className="text-white font-bold p-3 text-center text-red-500">No product available</h2>
+                )}/>
+            </Routes>
         </div>
+        </BrowserRouter>
     );
 }
 
