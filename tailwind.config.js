@@ -4,9 +4,13 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
-      colors:{
-        light: '#d4c9cd',
-        dark: '#0d0408'
+      colors: {
+        light: '#dbe2e5',
+        dark: '#0d0408',
+        main: {
+          200: '#8e9dc3',
+          600: '#324e95',
+        }
       },
       fontFamily: {
         archivo:['Archivo, sans-serif']
