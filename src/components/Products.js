@@ -61,8 +61,8 @@ const Products = () => {
     }
 
     return (
-        <div className='flex flex-col bg-light'>
-            <div className='p-6 flex flex-col items-center gap-3'>
+        <div className='flex flex-col bg-light px-5'>
+            <div className='p-6 flex flex-col items-center gap-3 w-min-[300px] w-full'>
                 <Header toggleForm={ () => setShowAdd(!showAdd) } showAdd={ showAdd }/>
                 <span className='w-[80%] h-[1px] block bg-main-600 shadow-lg shadow-dark'></span>
                 { showAdd && <AddProduct onAdd={ addProduct } toggleForm={ () => setShowAdd(!showAdd) }/> }
