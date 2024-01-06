@@ -64,8 +64,9 @@ const AddProduct = ({ onAdd, toggleForm }) => {
                     <div className='form-control'>
                         <label><span>Category</span>
                             <select name='category' onChange={ e => setCategory(e.target.value) }>
+                                <option>Choose a category</option>
                                 <option value='furniture'>Furniture</option>
-                                <option value='kitchen-tool'>Kitchen tool</option>
+                                <option value='kitchen tool'>Kitchen tool</option>
                                 <option value='car'>Car</option>
                                 <option value='electronic'>Electronic</option>
                                 <option value='book'>Book</option>

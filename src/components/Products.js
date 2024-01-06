@@ -42,7 +42,8 @@ const Products = () => {
     const [showAdd, setShowAdd] = useState(false);
 
     const addProduct = product => { 
-        product.id = products[products.length - 1].id + 1;
+        if(products.length == 0) product.id = 1;
+        else product.id = products[products.length - 1].id + 1;
         setProducts([...products, product]);
     }
     const updateProduct = updateProduct => {
@@ -62,10 +63,10 @@ const Products = () => {
 
     return (
         <div className='flex flex-col px-5 items-center max-w-[1200px] self-center'>
-            <div className='py-10 flex flex-col items-center gap-3 w-full'>
+            <div className='py-10 flex flex-col items-center gap-5 w-full'>
                 <Header toggleForm={ () => setShowAdd(!showAdd) } showAdd={ showAdd }/>
-                <span className='w-full h-[1px] block bg-main-600 shadow-lg shadow-dark'></span>
                 { showAdd && <AddProduct onAdd={ addProduct } toggleForm={ () => setShowAdd(!showAdd) }/> }
+                <span className='w-full h-[1px] block bg-main-600 shadow-lg shadow-dark'></span>
             </div>
             { products.length > 0 ? (
                 <ul className='flex flex-wrap gap-5 justify-center'>

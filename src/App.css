@@ -41,6 +41,7 @@
   }
   @apply p-3 gap-7 flex flex-col gap-3 shadow-lg
 }
+
 .form-blue{
   & span{
     @apply shadow-comp-200
@@ -51,7 +52,7 @@
   & span{
     @apply shadow-dark
   }
-  @apply bg-gradient-to-br from-neutral-200 to-neutral-600
+  @apply bg-gradient-to-br from-neutral-200 to-neutral-400
 }
 
 .product-card{
@@ -59,7 +60,10 @@
     &>div{
       @apply flex justify-between gap-3
     }
-    @apply flex flex-col gap-4
+    @apply flex flex-col
   }
+  &>div:last-of-type{
+      @apply gap-3
+    }
   @apply flex-[1_1_500px] max-w-[800px] h-max p-2 flex flex-wrap gap-3 justify-between bg-gradient-to-br from-neutral-200 to-neutral-400 shadow-lg
 }
