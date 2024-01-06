@@ -7,25 +7,38 @@
 .btn:active{
   @apply shadow-inner translate-y-px translate-x-px 
 }
-
 .btn-gr-blue{
   @apply bg-gradient-to-br from-main-900 to-main-600 shadow-main-600 text-comp
 }
 .btn-gr-red{
   @apply bg-gradient-to-br from-red-400 to-red-600 shadow-red-800
 }
-
 .btn-gr-green{
   @apply bg-gradient-to-br from-green-400 to-green-800
 }
 
-
 .add-form{
-  @apply p-3 border-t bg-green-200 rounded-lg flex flex-col gap-y-3
+  @apply p-3 border-t bg-gradient-to-br from-main-800 to-main-600 gap-7 
+}
+.add-form>div{
+  @apply flex flex-wrap gap-6
+}
+.add-form>div>div{
+  @apply flex flex-col gap-3
 }
 .form-control label{
-  @apply block text-sm font-medium text-stone-900
+  @apply block text-sm font-medium text-comp text-text flex flex-col gap-2
+}
+.form-control label>span{
+  @apply drop-shadow-sm shadow-comp
 }
 .form-control input{
-  @apply block rounded bg-green-300 border border-green-400 p-2 w-full focus:border-green-800 outline-green-800
+  @apply block p-2 w-full bg-neutral-100 text-dark
 }
+.form-control select{
+  @apply text-dark p-2 bg-light
+}
+.form-control select option{
+  @apply text-dark
+}
+

@@ -1,6 +1,7 @@
 import Products from './components/Products';
 import {BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
+import About from './components/About';
 import MainNav from './components/MainNav';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
                     <Routes>
                         <Route path='/' element={ <Home/> }/>
                         <Route path='/products' element={ <Products/> }/>
+                        <Route path='/about' element={ <About/> }/>
                     </Routes>
                 </div>
             </div>
