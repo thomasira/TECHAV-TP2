@@ -8,7 +8,7 @@ const UpdateProduct = ({ product, onUpdate, toggleForm }) => {
     const id = product.id;
 
     const onSubmit = (e) => {
-        e.preventDefault()
+        e.preventDefault();
         if(!name){
             alert('Please add a product name');
             return;
@@ -64,6 +64,7 @@ const UpdateProduct = ({ product, onUpdate, toggleForm }) => {
                 </label>
             </div>
             <input type='submit' className='btn btn-gr-green btn-block mt-4' value='Save product'/>
+            <button className='btn' onClick={ toggleForm }>cancel</button>
         </form>
     );
 }

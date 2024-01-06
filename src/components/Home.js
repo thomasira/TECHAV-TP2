@@ -1,4 +1,5 @@
 import BbLogo from "./BbLogo";
+import { Link } from "react-router-dom";
 
 const Home = () => {
     return (
@@ -6,6 +7,7 @@ const Home = () => {
         <div >
           <div>
             <h1 className='text-xl'>Welcome to <BbLogo direction={ 'horizontal' } size={ 'l' } color={ 'comp' }/></h1>
+            <Link to='/products' className="btn">Come in!</Link>            
           </div>
         </div>
       </div>

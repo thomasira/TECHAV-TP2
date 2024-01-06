@@ -20,7 +20,7 @@ const AddProduct = ({ onAdd, toggleForm }) => {
         setCategory('');
     }
     return (
-        <form className='add-form' onSubmit={ onSubmit }>
+        <form className='add-form w-full' onSubmit={ onSubmit }>
             <div className='form-control'>
                 <label>Product
                     <input

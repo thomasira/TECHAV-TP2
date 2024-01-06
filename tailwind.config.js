@@ -10,6 +10,7 @@ module.exports = {
         main: {
           200: '#8e9dc3',
           600: '#324e95',
+          900: '#142141'
         },
         comp: '#f8d16d'
       },
@@ -24,6 +25,11 @@ module.exports = {
         l: 'clamp(32px, 5vw, 48px)',
         xl: 'clamp(42px, 7vw, 60px)',
         huge: 'clamp(60px, 9.25vw, 96px)',
+      },
+      boxShadow: {
+        sm: '1px 2px 2px 0px rgba(0, 0, 0, 0.5)',
+        lg: '1px 4px 8px 0px rgba(0, 0, 0, 0.4)',
+        inner: 'inset 1px 2px 2px 0px rgb(0, 0, 0, 0.5)'
       }
     },
   },
