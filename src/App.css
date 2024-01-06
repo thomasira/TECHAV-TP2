@@ -1,5 +1,5 @@
 .btn{
-  @apply font-medium text-text px-5 py-1 text-center cursor-pointer shadow-sm h-max
+  @apply font-medium text-text text-dark px-5 py-1 text-center cursor-pointer shadow-sm h-max
 }
 .btn:hover{
   @apply hover:bg-gradient-to-bl
@@ -7,38 +7,59 @@
 .btn:active{
   @apply shadow-inner translate-y-px translate-x-px 
 }
+.btn-sm{
+  @apply text-xs px-3 py-0.5
+}
 .btn-gr-blue{
-  @apply bg-gradient-to-br from-main-900 to-main-600 shadow-main-600 text-comp
+  @apply bg-gradient-to-br from-main-900 to-main-600 shadow-main-600 text-comp-200
+}
+.btn-gr-blue-200{
+  @apply bg-gradient-to-br from-main-600 to-main-200 shadow-main-600
 }
 .btn-gr-red{
   @apply bg-gradient-to-br from-red-400 to-red-600 shadow-red-800
 }
-.btn-gr-green{
-  @apply bg-gradient-to-br from-green-400 to-green-800
+.btn-gr-yellow{
+  @apply bg-gradient-to-br from-comp-200 to-comp-400
 }
 
-.add-form{
-  @apply p-3 border-t bg-gradient-to-br from-main-800 to-main-600 gap-7 
+.form{
+  & :is(input, select){
+    @apply block p-2 bg-neutral-100 text-dark shadow-innerLg
+  }
+  & label{
+    &>span{
+      @apply drop-shadow-sm
+    }
+    @apply block text-sm font-medium text-text flex flex-col gap-2
+  }
+  &>div{
+    &>div{
+      @apply flex flex-col gap-3
+    }
+    @apply flex flex-wrap gap-6
+  }
+  @apply p-3 gap-7 flex flex-col gap-3 shadow-lg
 }
-.add-form>div{
-  @apply flex flex-wrap gap-6
+.form-blue{
+  & span{
+    @apply shadow-comp-200
+  }
+  @apply bg-gradient-to-br from-main-800 to-main-600 text-comp-200
 }
-.add-form>div>div{
-  @apply flex flex-col gap-3
-}
-.form-control label{
-  @apply block text-sm font-medium text-comp text-text flex flex-col gap-2
-}
-.form-control label>span{
-  @apply drop-shadow-sm shadow-comp
-}
-.form-control input{
-  @apply block p-2 w-full bg-neutral-100 text-dark
-}
-.form-control select{
-  @apply text-dark p-2 bg-light
-}
-.form-control select option{
-  @apply text-dark
+.form-gray{
+  & span{
+    @apply shadow-dark
+  }
+  @apply bg-gradient-to-br from-neutral-200 to-neutral-600
 }
 
+.product-card{
+  &>div{
+    &>div{
+      @apply flex justify-between gap-3
+    }
+    @apply flex flex-col gap-4
+  }
+  @apply flex-[1_1_500px] max-w-[800px] h-max p-2 flex flex-wrap gap-3 justify-between bg-gradient-to-br from-neutral-200 to-neutral-400 shadow-lg
+}

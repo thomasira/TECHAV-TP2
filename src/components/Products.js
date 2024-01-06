@@ -61,14 +61,14 @@ const Products = () => {
     }
 
     return (
-        <div className='flex flex-col bg-light px-5 items-center'>
-            <div className='p-6 flex flex-col items-center gap-3 w-full max-w-[1000px]'>
+        <div className='flex flex-col px-5 items-center max-w-[1200px] self-center'>
+            <div className='py-10 flex flex-col items-center gap-3 w-full'>
                 <Header toggleForm={ () => setShowAdd(!showAdd) } showAdd={ showAdd }/>
                 <span className='w-full h-[1px] block bg-main-600 shadow-lg shadow-dark'></span>
                 { showAdd && <AddProduct onAdd={ addProduct } toggleForm={ () => setShowAdd(!showAdd) }/> }
             </div>
             { products.length > 0 ? (
-                <ul className='flex flex-col gap-2 container'>
+                <ul className='flex flex-wrap gap-5 justify-center'>
                 { products.map(product => (
                     product.id !== updateId ? (
                         <Product product={ product } key={ product.id } onDelete={ deleteProduct } onUpdate={ showUpdate }/>
