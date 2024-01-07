@@ -6,7 +6,10 @@ const UpdateProduct = ({ product, onUpdate, toggleForm }) => {
     const [description, setDescription] = useState(product.description);
     const [price, setPrice] = useState(product.price);
     const [category, setCategory] = useState(product.category);
+
+    /* add id to send upward */
     const id = product.id;
+
     const [showAlert, setShowAlert] = useState(false);
 
     const onSubmit = (e) => {

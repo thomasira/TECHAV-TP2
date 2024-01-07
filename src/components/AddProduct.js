@@ -2,11 +2,18 @@ import { useState } from 'react';
 import Alert from './Alert';
 
 const AddProduct = ({ onAdd, toggleForm }) => {
+
     const [name, setName] = useState('');
     const [description, setDescription] = useState('');
     const [price, setPrice] = useState('00.00');
     const [category, setCategory] = useState('');
     const [showAlert, setShowAlert] = useState(false);
+
+    /**
+     * submit form, verify for name field. Send data upward, toggle form off and reset form fields
+     * 
+     * @param {*} e 
+     */
     const onSubmit = (e) => {
         e.preventDefault()
         if(!name){
@@ -20,6 +27,7 @@ const AddProduct = ({ onAdd, toggleForm }) => {
             setCategory('');
         }
     }
+
     return (
         <form className='form form-blue w-full' onSubmit={ onSubmit }>
             { showAlert && <Alert text={ 'make sure product has a name' } toggleAlert={ showAlert } />}

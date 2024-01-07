@@ -36,16 +36,20 @@ const Products = () => {
         }
     ]);
 
+    /* manage toggle of update form */
     const [updateId, setUpdateId] = useState(false);
     const showUpdate = id => setUpdateId(id);
     
+    /* manage toggle of add form */
     const [showAdd, setShowAdd] = useState(false);
 
+    /* manage adding product to products array */
     const addProduct = product => { 
         if(products.length == 0) product.id = 1;
         else product.id = products[products.length - 1].id + 1;
         setProducts([...products, product]);
     }
+    /* manage update product from products array */
     const updateProduct = updateProduct => {
         setProducts(products.map(product => 
             product.id === updateProduct.id ? {
@@ -57,18 +61,22 @@ const Products = () => {
             } : product
         ));
     }
+    /* manage delete product from products array */
     const deleteProduct = id => {
         setProducts(products.filter(products => products.id !== id));
     }
 
     return (
         <div className='flex flex-col px-5 items-center max-w-[1200px] self-center'>
+            
             <div className='py-10 flex flex-col items-center gap-5 w-full'>
                 <Header toggleForm={ () => setShowAdd(!showAdd) } showAdd={ showAdd }/>
                 { showAdd && <AddProduct onAdd={ addProduct } toggleForm={ () => setShowAdd(!showAdd) }/> }
                 <span className='w-full h-[1px] block bg-main-600 shadow-lg shadow-dark'></span>
             </div>
+
             { products.length > 0 ? (
+
                 <ul className='flex flex-wrap gap-5 justify-center py-4'>
                 { products.map(product => (
                     product.id !== updateId ? (
@@ -78,6 +86,7 @@ const Products = () => {
                     )
                 )) }
                 </ul>
+                
             ) : (
                 <h2>No products available</h2>
             )}

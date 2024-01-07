@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 
 const Button = (props) => {
     return (
@@ -8,9 +7,5 @@ const Button = (props) => {
 Button.defaultProps = {
     color: 'btn-gr-blue'
 }
-Button.propTypes = {
-    color: PropTypes.string,
-    text: PropTypes.string.isRequired,
-    onClick: PropTypes.func.isRequired,
-};
+
 export default Button;
