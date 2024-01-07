@@ -10,7 +10,7 @@ function App() {
         <BrowserRouter>
             <div className='bg-neutral-200 min-h-screen flex flex-col'>
                 <MainNav/>
-                <div className='text-yellow text-text font-archivo flex flex-1 flex-col gap-5'>
+                <div className='text-dark text-text font-archivo flex flex-1 flex-col gap-5'>
                     <Routes>
                         <Route path='/' element={ <Home/> }/>
                         <Route path='/products' element={ <Products/> }/>

@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "name": "Yogurt",
+      "description": "greek yogurt",
+      "price": "60.56",
+      "category": "kitchen tool",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Sofa",
+      "description": "comfy sofa",
+      "price": 2032.99,
+      "category": "furniture"
+    },
+    {
+      "id": 3,
+      "name": "The big atlas",
+      "description": "an atlas of the world",
+      "price": 43.29,
+      "category": "book"
+    },
+    {
+      "name": "Wok to go",
+      "description": "cast iron wok",
+      "price": "80.26",
+      "category": "furniture",
+      "id": 8
+    },
+    {
+      "name": "new cool product",
+      "description": "dasd",
+      "price": "50",
+      "category": "car",
+      "id": 9
+    },
+    {
+      "name": "dasd",
+      "description": "dsad ",
+      "price": "10",
+      "category": "book",
+      "id": 10
+    }
+  ]
+}
