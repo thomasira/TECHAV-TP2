@@ -69,7 +69,7 @@ const Products = () => {
                 <span className='w-full h-[1px] block bg-main-600 shadow-lg shadow-dark'></span>
             </div>
             { products.length > 0 ? (
-                <ul className='flex flex-wrap gap-5 justify-center'>
+                <ul className='flex flex-wrap gap-5 justify-center py-4'>
                 { products.map(product => (
                     product.id !== updateId ? (
                         <Product product={ product } key={ product.id } onDelete={ deleteProduct } onUpdate={ showUpdate }/>

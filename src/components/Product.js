@@ -8,7 +8,8 @@ const Product = ({ product, onDelete, onUpdate }) => {
                 <div className='flex-1 font-bold'>
                     <h3 className='text-m'>{ product.name }</h3>
                     <div>
-                        <p className='text-m'>$ { product.price }</p>
+                        <p>$</p>
+                        <p>{ product.price }</p>
                     </div>
                 </div>
                 <div>

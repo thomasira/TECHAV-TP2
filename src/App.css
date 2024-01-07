@@ -1,5 +1,5 @@
 .btn{
-  @apply font-medium text-text text-dark px-5 py-1 text-center cursor-pointer shadow-sm h-max
+  @apply font-medium text-text text-dark px-5 py-1 text-center cursor-pointer shadow-sm h-max w-max
 }
 .btn:hover{
   @apply hover:bg-gradient-to-bl
@@ -58,7 +58,10 @@
 .product-card{
   &>div{
     &>div{
-      @apply flex justify-between gap-3
+      &>div{
+        @apply flex text-m 
+      }
+      @apply flex justify-between gap-2
     }
     @apply flex flex-col
   }

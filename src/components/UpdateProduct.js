@@ -21,7 +21,7 @@ const UpdateProduct = ({ product, onUpdate, toggleForm }) => {
 
     return (
         <form className='form form-gray flex-[1_1_500px] max-w-[800px]' onSubmit={ onSubmit }>
-            { showAlert && <Alert text={ 'make sure product has a name'} color={ 'gray' } toggleAlert={ showAlert } />}
+            { showAlert && <Alert text={ 'make sure product has a name'} bgColor={ 'bg-neutral-800' } toggleAlert={ showAlert } />}
             <div>
                 <div className='flex-1 min-w-[200px]'>
                     <div className='form-control'>
