@@ -16,9 +16,12 @@ By and Buy is a simple web project. A first time experimentation with React buil
 
 ## The demo
 
+https://github.com/thomasIRA/TECHAV-TP2/assets/134738954/cd7ba92c-6a6f-4a7b-b5b6-74b455d0e8b2
+
 ## The docs
 
-get the PDF -> 
+![byandbuy](https://github.com/thomasIRA/TECHAV-TP2/assets/134738954/ff09ddd8-00c5-42ac-89e3-a43e50ee2e0f)
+get the PDF -> [byandbuy.pdf](https://github.com/thomasIRA/TECHAV-TP2/files/13864016/byandbuy.pdf)
 
 ## The installation
 
