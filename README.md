@@ -20,7 +20,7 @@ https://github.com/thomasIRA/TECHAV-TP2/assets/134738954/cd7ba92c-6a6f-4a7b-b5b6
 
 ## The docs
 
-![byandbuy](https://github.com/thomasIRA/TECHAV-TP2/assets/134738954/ff09ddd8-00c5-42ac-89e3-a43e50ee2e0f)
+![byandbuy](https://github.com/thomasIRA/TECHAV-TP2/assets/134738954/ff09ddd8-00c5-42ac-89e3-a43e50ee2e0f)  
 get the PDF -> [byandbuy.pdf](https://github.com/thomasIRA/TECHAV-TP2/files/13864016/byandbuy.pdf)
 
 ## The installation
